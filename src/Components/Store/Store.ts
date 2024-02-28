@@ -1,7 +1,7 @@
 import {  configureStore } from '@reduxjs/toolkit'
 
 import userReducer  from '../Reducers/userReducer.tsx'
-import { createLogger } from 'redux-logger'
+import {createLogger}  from 'redux-logger'
 
 const loggerMiddleware= createLogger()
 
