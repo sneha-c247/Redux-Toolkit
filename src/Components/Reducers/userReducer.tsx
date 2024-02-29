@@ -40,8 +40,13 @@ export interface InitialStateProps {
       builder
         .addCase(fetchUserByName.fulfilled, (state, action) => {
           state.name = action.payload;
-        });
-    },
+        })
+    .addCase(fetchUserByName.pending, (state) => {
+      state.name = "Loading";
+    }).addCase(fetchUserByName.rejected, (state) => {
+      state.name = "Try Again";
+    })
+  },
   })
 
 export const {changeName,changeAge}= userReducer.actions

@@ -12,4 +12,4 @@ export const store = configureStore({
   getDefaultMiddleware().concat(loggerMiddleware),
  
 })
-  export type AppDispatch = typeof store.dispatch;
+ 
